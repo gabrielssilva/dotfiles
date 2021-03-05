@@ -83,13 +83,6 @@ let g:netrw_list_hide= '.*\.swp$'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
-" syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_eruby_ruby_quiet_messages =
-	\ {'regex': 'possibly useless use of % in void context'}
-
 " also uses ag over grep
 set grepprg=ag\ --nogroup\ --nocolor
 
