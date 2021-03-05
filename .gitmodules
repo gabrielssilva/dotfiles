@@ -19,9 +19,6 @@
 [submodule ".vim/pack/plugins/start/nerdtree"]
 	path = .vim/pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule ".vim/pack/plugins/start/syntastic"]
-	path = .vim/pack/plugins/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule ".vim/pack/plugins/start/vim-css-color"]
 	path = .vim/pack/plugins/start/vim-css-color
 	url = https://github.com/ap/vim-css-color.git
