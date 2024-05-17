@@ -55,3 +55,6 @@
 [submodule ".vim/pack/plugins/start/powerline"]
 	path = .vim/pack/plugins/start/powerline
 	url = https://github.com/powerline/powerline.git
+[submodule ".vim/pack/plugins/start/copilot.vim"]
+	path = .vim/pack/plugins/start/copilot.vim
+	url = https://github.com/github/copilot.vim.git
