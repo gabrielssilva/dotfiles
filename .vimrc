@@ -3,13 +3,10 @@ set nocompatible
 set encoding=utf-8
 
 " Default configuration in case there's no other definition in ftplugin
-set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set smarttab
-set smartindent
-set autoindent
+set expandtab
 syntax on
 
 " Persistent undo
@@ -25,20 +22,10 @@ set number
 set wildignore=*.o,*~,*.pyc,*.swp
 
 " Use the old regex engine, so ruby syntax highlighting will be faster
-set re=1
-
-" Paste behaviour
-set paste
-
-" status line
-set laststatus=2
-set linespace=0
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+set re=2
 
 " Enable filetype plugins "
-filetype plugin on
+filetype plugin indent on
 
 " Disable preview code when using omni complete"
 set completeopt=menu
@@ -63,6 +50,7 @@ let g:airline_theme = 'papercolor'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 
 " Keep git sign column as default (+, -, ~, etc.)
 let g:gitgutter_override_sign_column_highlight = 0
@@ -86,13 +74,12 @@ let g:ctrlp_use_caching = 0
 " also uses ag over grep
 set grepprg=ag\ --nogroup\ --nocolor
 
-" bind \ (backward slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>
-
 " Custom extensions
 autocmd BufNewFile,BufRead *.es6 set syntax=javascript
 
+imap <silent> <C-J> <Plug>(copilot-next)
+imap <silent> <C-K> <Plug>(copilot-previous)
+imap <silent> <C-\> <Plug>(copilot-dismiss)
+
 " mappings
 map <c-n> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
