@@ -7,7 +7,6 @@
 
 !.vim/
 !.vim/**
-.vim/undo/
 .vim/.netrwhist
 
 !.Xauthority
